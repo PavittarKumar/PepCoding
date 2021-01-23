@@ -53,7 +53,7 @@ public class Main {
         }
         
         //diagonal
-        for(int i = 1; i*i <= (dr - sr)*(dr - sr) + (dc - sc)*(dc - sc); i++){
+        for(int i = 1; i <= dr - sr && i <= dc - sc; i++){
             
             d  = getMazePaths(sr + i, sc + i, dr, dc);
             
