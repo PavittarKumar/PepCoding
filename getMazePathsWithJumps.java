@@ -31,7 +31,7 @@ public class Main {
         output = new ArrayList<>();
         
         //horizontal
-        for(int i = 1; i <= dc; i++){
+        for(int i = 1; i <= dc - sc; i++){
             
             h  = getMazePaths(sr, sc + i, dr, dc);
             
@@ -42,8 +42,7 @@ public class Main {
         }
         
         //vertical
-        
-        for(int i = 1; i <= dr; i++){
+        for(int i = 1; i <= dr - sr; i++){
             
             v  = getMazePaths(sr + i, sc, dr, dc);
             
@@ -54,8 +53,7 @@ public class Main {
         }
         
         //diagonal
-        
-        for(int i = 1; i*i <= (dr*dr) + (dc*dc); i++){
+        for(int i = 1; i*i <= (dr - sr)*(dr - sr) + (dc - sc)*(dc - sc); i++){
             
             d  = getMazePaths(sr + i, sc + i, dr, dc);
             
