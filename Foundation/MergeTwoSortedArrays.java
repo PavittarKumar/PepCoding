@@ -8,30 +8,27 @@ public class Main {
         
         int[] c = new int[a.length + b.length];
         
-        int i = 0, j = 0, k = 0;
+        int i = 0, j = 0;
         
         while(i < a.length && j < b.length){
             
             if(a[i] < b[j]){
-                c[k] = a[i];
+                c[i + j] = a[i];
                 i++;
             } else {
-                c[k] = b[j];
+                c[i + j] = b[j];
                 j++;
             }
-            k++;
         }
         
         if(i < a.length){
             while(i < a.length){
-                c[k] = a[i];
-                k++;
+                c[i + j] = a[i];
                 i++;
             }
         } else {
             while(j < b.length){
-                c[k] = b[j];
-                k++;
+                c[i + j] = b[j];
                 j++;
             }
         }
