@@ -7,7 +7,7 @@ public class Main {
     //write your code here
     int pivotidx = partition(arr, arr[hi], lo, hi);
     
-    if(pivotidx == k) return arr[pivotidx];
+    if(pivotidx == k) return arr[pivotidx]; // This will act as the base case.
     else if(pivotidx > k){
         return  quickSelect(arr, lo, pivotidx - 1, k);
     } else {
