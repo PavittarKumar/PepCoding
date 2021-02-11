@@ -5,8 +5,6 @@ public class Main {
 
   public static int quickSelect(int[] arr, int lo, int hi, int k) {
     //write your code here
-    if(lo > hi) return 0;
-    
     int pivotidx = partition(arr, arr[hi], lo, hi);
     
     if(pivotidx == k) return arr[pivotidx];
