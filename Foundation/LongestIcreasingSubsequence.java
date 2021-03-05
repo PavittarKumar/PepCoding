@@ -27,7 +27,7 @@ public class Main {
     public static int solve(int[] arr, int idx, int lastIndex, int[][] dp){
         if(idx == arr.length) return 0;
         
-        if(lastIndex != -1 && dp[idx][lastIndex] != -1) return dp[idx][lastIndex];
+        if(dp[idx][lastIndex + 1] != -1) return dp[idx][lastIndex + 1];
         
         int f1 = solve(arr, idx + 1, lastIndex, dp);
         int f2 = 0;
@@ -35,7 +35,7 @@ public class Main {
             f2 = 1 + solve(arr, idx + 1, idx, dp);
         }
         int ans = Math.max(f1, f2);
-        if(lastIndex != -1) dp[idx][lastIndex] = ans;
+        dp[idx][lastIndex + 1] = ans;
         return ans;
     }
 
