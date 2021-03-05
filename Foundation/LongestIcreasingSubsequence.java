@@ -90,3 +90,23 @@ public class Main {
 //     }
 
 // }
+
+// Tabulation based on the 2nd approach
+
+// public static int solvet(int[] arr){
+//     int[] dp = new int[arr.length];
+//     dp[0] = 1;
+//     int ans = 1;
+//     for(int i = 1; i < arr.length;i++){
+//         int max = 0;
+//         for(int j = 0; j < i; j++){
+//             if(arr[j] < arr[i])
+//             max = Math.max(dp[j], max);
+//         }
+//         dp[i] = max + 1;
+//         ans = Math.max(ans, dp[i]);
+//     }
+//     return ans;
+// }
+
+// }
