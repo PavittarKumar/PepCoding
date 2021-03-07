@@ -1,4 +1,4 @@
-// This question is similar to other Palindromic String of DP
+// This question is similar to other Palindromic String of DP except some minor changes
 
 // My approach
 
