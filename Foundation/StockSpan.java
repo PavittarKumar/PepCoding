@@ -26,28 +26,23 @@ public static void main(String[] args) throws Exception {
 
  public static int[] solve(int[] arr){
    // solve
-   Stack<Integer> s = new Stack<>();
    Stack<Integer> index = new Stack<>();
     int[] output = new int[arr.length];
    
     for(int i = 0; i < arr.length; i++){
-       if(s.isEmpty()) {
+       if(index.isEmpty()) {
            index.push(i);
-           s.push(arr[i]);
            output[i] = i + 1;
        } else {
            
-           while(!s.isEmpty() && s.peek() < arr[i]) {
+           while(!index.isEmpty() && arr[index.peek()] < arr[i]) {
                index.pop();
-               s.pop();
            }
-            if(s.isEmpty()) {
+            if(index.isEmpty()) {
                 output[i] = i + 1;
             }
             else output[i] = i - index.peek();
             index.push(i);
-            s.push(arr[i]);
-            
        }
     }
     return output;
