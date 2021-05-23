@@ -10,7 +10,7 @@ public class Permutations1 {
         System.out.println();
         return;
     }
-    
+    // Simple (n)!/(n - r)! approach
     for(int i = 0; i < boxes.length; i++) {
         if(boxes[i] == 0) {
             boxes[i] = ci;

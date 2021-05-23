@@ -10,7 +10,7 @@ public class Combinations1 {
         }
         return;
     }
-    
+    //Simple (n)!/[(r!) * (n - r)!] approach
     combinations(cb + 1, tb, ssf + 1, ts, asf + "i");
     combinations(cb + 1, tb, ssf, ts, asf + "-");
     
